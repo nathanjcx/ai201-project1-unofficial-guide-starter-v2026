@@ -247,8 +247,8 @@ original and final answers, and test logs are in [results/](results/).
 
 ## How I Used AI
 
-**1. Setup and test questions.** I asked Codex to guide me step by step and
-then asked for five simple questions. It explained why a reply needs its thread
+**1. Setup and test questions.** I had codex up on the right and vscode on the left and followed along with explanations behind the theory of the assignment.
+I also asked for five simple questions. It explained why a reply needs its thread
 title and suggested questions with expected answer phrases. I ran the setup
 check, chose `advice_threads`, indexed it, asked the first email question,
 edited `questions.py`, and made the first commit. Before testing the five
