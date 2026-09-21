@@ -1,0 +1,431 @@
+{
+  "measured_at": "2026-09-21T06:17:15.146993+00:00",
+  "corpus": "advice_threads",
+  "embedding_model": "all-MiniLM-L6-v2",
+  "distance_metric": "cosine",
+  "top_k": 5,
+  "rows": [
+    {
+      "question": "How long should I wait for a professor to reply if no given response window?",
+      "in_corpus": true,
+      "best_distance": 0.41017476298727007,
+      "results": [
+        {
+          "text": "THREAD: Do professors actually answer email?\n\n--- reply 1 (21 votes) ---\nVaries enormously. General rule I've found: if the syllabus states a response window, it's honoured. If it doesn't, assume 48 hours and don't panic before then.\n\n--- reply 2 (33 votes) ---\nOffice hours are dramatically more effective than email for anything that takes more than two sentences to answer. They're also usually empty.\n\n--- reply 3 (15 votes) ---\nEmpty office hours is the biggest unused resource here and I say that having wasted a year not going.",
+          "source": "thread_professor_email.txt",
+          "label": "thread_professor_email.txt#0",
+          "distance": 0.41017476298727007,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: What actually happens if you hand something in late?\n\n--- reply 1 (20 votes) ---\nEntirely instructor-dependent and the syllabus is accurate. If it says 10% a day, it's 10% a day.\n\n--- reply 2 (47 votes) ---\nThe universal rule: ask before the deadline, not after. Almost everyone will give you two days if you ask on Wednesday for a Friday deadline. Almost nobody will on the following Monday.\n\n--- reply 3 (15 votes) ---\nDocumented illness goes through the dean of students rather than the instructor, and that route works.",
+          "source": "thread_late_work.txt",
+          "label": "thread_late_work.txt#0",
+          "distance": 0.6219642000878709,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Is it weird to go to office hours with no specific question?\n\n--- reply 1 (44 votes) ---\nNo, and this is the single most common thing first years get wrong. 'I'm following the lectures but I don't feel like I understand the shape of it' is a completely normal thing to say.\n\n--- reply 2 (29 votes) ---\nThey're usually empty. You are doing the instructor a favour by turning up.\n\n--- reply 3 (18 votes) ---\nIf it helps, treat it as a standing appointment. Go every week for a month and it stops feeling like a thing.",
+          "source": "thread_office_hours_etiquette.txt",
+          "label": "thread_office_hours_etiquette.txt#0",
+          "distance": 0.7172587128798256,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: What do you wish you'd known in first year?\n\n--- reply 1 (41 votes) ---\nThat the add/drop deadline and the withdrawal deadline are different dates and only one of them is on the calendar everyone reads.\n\n--- reply 2 (28 votes) ---\nThat you can take a course pass/fail and declare it late \u2014 up to week eight. I carried a grade I didn't need to.\n\n--- reply 3 (35 votes) ---\nThat the writing centre will read a draft for any course, not just writing courses. Free, and the appointments go unbooked.\n\n--- reply 4 (52 votes) ---\nHonestly: that nobody is watching as closely as you think. I spent a year worried about looking like I knew what I was doing.\n\n--- reply 5 (17 votes) ---\nThat your adviser's job is partly to know the exceptions to rules. Ask before assuming a deadline is fixed.",
+          "source": "thread_first_year_regret.txt",
+          "label": "thread_first_year_regret.txt#0",
+          "distance": 0.7394261979749781,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Roommate situation isn't working. What now?\n\n--- reply 1 (28 votes) ---\nTalk to your RA early, and frame it as 'we need help sorting this out' rather than 'move me'. Room changes are possible but the process starts with mediation and skipping that step slows it down.\n\n--- reply 2 (14 votes) ---\nRoom changes happen at the semester boundary almost always, and mid-semester only in fairly serious cases.\n\n--- reply 3 (33 votes) ---\nWrite down specifics before the meeting. 'It's not working' is hard to act on; 'guests four nights a week past 2am' is not.",
+          "source": "thread_roommate_conflict.txt",
+          "label": "thread_roommate_conflict.txt#0",
+          "distance": 0.7521993567144456,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "Where can I check the current textbook edition's problem numbering for free?",
+      "in_corpus": true,
+      "best_distance": 0.350329264797968,
+      "results": [
+        {
+          "text": "THREAD: Does the edition of the textbook matter?\n\n--- reply 1 (23 votes) ---\nFor maths and physics, almost never \u2014 problem numbering shifts and that's it. For anything where the field moves, it can matter a lot.\n\n--- reply 2 (34 votes) ---\nAsk the instructor directly. Most will tell you the previous edition is fine, and they can't put that in the syllabus for procurement reasons.\n\n--- reply 3 (12 votes) ---\nThe library reserve copy is always the current edition, so you can check the numbering against yours for free.",
+          "source": "thread_textbook_editions.txt",
+          "label": "thread_textbook_editions.txt#0",
+          "distance": 0.350329264797968,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Is the printing quota enough?\n\n--- reply 1 (17 votes) ---\nFor most people yes. $30 is about 600 pages black and white. It's the colour printing that eats it \u2014 eight times the cost per page.\n\n--- reply 2 (11 votes) ---\nDoesn't roll over between semesters. Print your readings in December rather than losing it.",
+          "source": "thread_printing.txt",
+          "label": "thread_printing.txt#0",
+          "distance": 0.6259830063407914,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Anything specific for first-generation students?\n\n--- reply 1 (33 votes) ---\nThe advising office has a specific programme and it is genuinely good, but it is opt-in and badly publicised. Ask for it by name.\n\n--- reply 2 (41 votes) ---\nThe thing I'd say: the unwritten rules are the hard part, not the coursework. Ask about the unwritten rules explicitly. People are happy to explain them and nobody volunteers them.\n\n--- reply 3 (16 votes) ---\nEmergency fund for textbooks and travel exists and is not means-tested beyond a short form.",
+          "source": "thread_first_gen.txt",
+          "label": "thread_first_gen.txt#0",
+          "distance": 0.7339666899167632,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: What do you wish you'd known in first year?\n\n--- reply 1 (41 votes) ---\nThat the add/drop deadline and the withdrawal deadline are different dates and only one of them is on the calendar everyone reads.\n\n--- reply 2 (28 votes) ---\nThat you can take a course pass/fail and declare it late \u2014 up to week eight. I carried a grade I didn't need to.\n\n--- reply 3 (35 votes) ---\nThat the writing centre will read a draft for any course, not just writing courses. Free, and the appointments go unbooked.\n\n--- reply 4 (52 votes) ---\nHonestly: that nobody is watching as closely as you think. I spent a year worried about looking like I knew what I was doing.\n\n--- reply 5 (17 votes) ---\nThat your adviser's job is partly to know the exceptions to rules. Ask before assuming a deadline is fixed.",
+          "source": "thread_first_year_regret.txt",
+          "label": "thread_first_year_regret.txt#0",
+          "distance": 0.7522771015751754,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: When should you actually use the pass/fail option?\n\n--- reply 1 (24 votes) ---\nFor a course outside your major that you're taking because you're curious. That's what it's for and most people never use it.\n\n--- reply 2 (38 votes) ---\nThe part that isn't advertised: you can declare it as late as week eight. So take the midterm first, then decide.\n\n--- reply 3 (20 votes) ---\nCareful with this one if you're applying to graduate programmes. Some want a letter grade for prerequisites and a P doesn't satisfy it.\n\n--- reply 4 (12 votes) ---\nTwo per year and eight across the degree. I hit the annual limit in second year and regretted spending one on an easy course.",
+          "source": "thread_pass_fail.txt",
+          "label": "thread_pass_fail.txt#0",
+          "distance": 0.7939491157007946,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "How much does renting a locker in the commuter lounge cost per year?",
+      "in_corpus": true,
+      "best_distance": 0.6024320283403767,
+      "results": [
+        {
+          "text": "THREAD: Is a bike worth it for a 20 minute walk commute?\n\n--- reply 1 (14 votes) ---\nYeah. Cuts an 18 minute walk to about 6. The thing nobody mentions is storage \u2014 covered bike parking exists at three buildings and is full by 9am at all three.\n\n--- reply 2 (9 votes) ---\nCounterpoint, I sold mine. Between November and March the paths are either icy or salted and salt destroys a drivetrain in one season.\n\n--- reply 3 (22 votes) ---\nBoth true. I keep a cheap bike for September to November and walk the rest of the year. Total cost was about $120 for the bike and I don't care what happens to it.\n\n--- reply 4 (5 votes) ---\nIf you do get one, the campus does free registration and it's the only reason I got mine back after it was taken.",
+          "source": "thread_bike_commute.txt",
+          "label": "thread_bike_commute.txt#0",
+          "distance": 0.6024320283403767,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Best study spots that aren't the library?\n\n--- reply 1 (23 votes) ---\nRidgeway Caf\u00e9 before 10am. Empty, quiet, good coffee, and they don't push you out.\n\n--- reply 2 (19 votes) ---\nThe science building has open lounges on floors 2 through 5 that are unlocked and almost always empty.\n\n--- reply 3 (14 votes) ---\nDepends what you need. If you need silence, the library third floor is the only place that reliably delivers it.\n\n--- reply 4 (9 votes) ---\nThe group study rooms in the library can be booked by one person and used alone. Nobody checks.",
+          "source": "thread_study_spots.txt",
+          "label": "thread_study_spots.txt#0",
+          "distance": 0.665547757240964,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Commuting an hour each way \u2014 is it survivable?\n\n--- reply 1 (26 votes) ---\nYes, but stack your courses. Three long days beats five short ones by a wide margin.\n\n--- reply 2 (21 votes) ---\nThe commuter lounge in the student centre has lockers you can rent for $20 a year and it changes the experience completely.\n\n--- reply 3 (13 votes) ---\nWatch the evening bus timetable before you register for anything that ends after 6pm.\n\n--- reply 4 (17 votes) ---\nI commuted for two years. The thing that made it work was treating the train as study time rather than dead time.",
+          "source": "thread_commuting.txt",
+          "label": "thread_commuting.txt#0",
+          "distance": 0.6887893267400466,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: When is laundry actually free in the dorms?\n\n--- reply 1 (27 votes) ---\nTuesday and Wednesday mornings, every building. Sunday evening is the worst and it isn't close.\n\n--- reply 2 (8 votes) ---\nDepends heavily on your building. Morrow has more machines per person than Fenwick so it's less of a problem there.\n\n--- reply 3 (16 votes) ---\nThe app that shows machine availability is wrong about half the time. It reports a machine as free for a few minutes after it finishes but before someone unloads it.",
+          "source": "thread_laundry_timing.txt",
+          "label": "thread_laundry_timing.txt#0",
+          "distance": 0.7051843627097649,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Is the printing quota enough?\n\n--- reply 1 (17 votes) ---\nFor most people yes. $30 is about 600 pages black and white. It's the colour printing that eats it \u2014 eight times the cost per page.\n\n--- reply 2 (11 votes) ---\nDoesn't roll over between semesters. Print your readings in December rather than losing it.",
+          "source": "thread_printing.txt",
+          "label": "thread_printing.txt#0",
+          "distance": 0.7410129796655769,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "What damages a bike's drivetrain during winter?",
+      "in_corpus": true,
+      "best_distance": 0.5205471328125724,
+      "results": [
+        {
+          "text": "THREAD: Is a bike worth it for a 20 minute walk commute?\n\n--- reply 1 (14 votes) ---\nYeah. Cuts an 18 minute walk to about 6. The thing nobody mentions is storage \u2014 covered bike parking exists at three buildings and is full by 9am at all three.\n\n--- reply 2 (9 votes) ---\nCounterpoint, I sold mine. Between November and March the paths are either icy or salted and salt destroys a drivetrain in one season.\n\n--- reply 3 (22 votes) ---\nBoth true. I keep a cheap bike for September to November and walk the rest of the year. Total cost was about $120 for the bike and I don't care what happens to it.\n\n--- reply 4 (5 votes) ---\nIf you do get one, the campus does free registration and it's the only reason I got mine back after it was taken.",
+          "source": "thread_bike_commute.txt",
+          "label": "thread_bike_commute.txt#0",
+          "distance": 0.5205471328125724,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: First winter here \u2014 what do I need?\n\n--- reply 1 (26 votes) ---\nLayers, not a big coat. The buildings are overheated and you'll carry a parka around all day.\n\n--- reply 2 (31 votes) ---\nBoots with actual tread. The path past the pond ices over and people go down on it every year.\n\n--- reply 3 (18 votes) ---\nGet a light that clips to your bag. It's dark by 4:30 in December and parts of the walk from Fenwick aren't lit well.",
+          "source": "thread_winter_advice.txt",
+          "label": "thread_winter_advice.txt#0",
+          "distance": 0.6156197959594881,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Commuting an hour each way \u2014 is it survivable?\n\n--- reply 1 (26 votes) ---\nYes, but stack your courses. Three long days beats five short ones by a wide margin.\n\n--- reply 2 (21 votes) ---\nThe commuter lounge in the student centre has lockers you can rent for $20 a year and it changes the experience completely.\n\n--- reply 3 (13 votes) ---\nWatch the evening bus timetable before you register for anything that ends after 6pm.\n\n--- reply 4 (17 votes) ---\nI commuted for two years. The thing that made it work was treating the train as study time rather than dead time.",
+          "source": "thread_commuting.txt",
+          "label": "thread_commuting.txt#0",
+          "distance": 0.7727521257070633,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: When is laundry actually free in the dorms?\n\n--- reply 1 (27 votes) ---\nTuesday and Wednesday mornings, every building. Sunday evening is the worst and it isn't close.\n\n--- reply 2 (8 votes) ---\nDepends heavily on your building. Morrow has more machines per person than Fenwick so it's less of a problem there.\n\n--- reply 3 (16 votes) ---\nThe app that shows machine availability is wrong about half the time. It reports a machine as free for a few minutes after it finishes but before someone unloads it.",
+          "source": "thread_laundry_timing.txt",
+          "label": "thread_laundry_timing.txt#0",
+          "distance": 0.7961540075684885,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: What actually happens if you hand something in late?\n\n--- reply 1 (20 votes) ---\nEntirely instructor-dependent and the syllabus is accurate. If it says 10% a day, it's 10% a day.\n\n--- reply 2 (47 votes) ---\nThe universal rule: ask before the deadline, not after. Almost everyone will give you two days if you ask on Wednesday for a Friday deadline. Almost nobody will on the following Monday.\n\n--- reply 3 (15 votes) ---\nDocumented illness goes through the dean of students rather than the instructor, and that route works.",
+          "source": "thread_late_work.txt",
+          "label": "thread_late_work.txt#0",
+          "distance": 0.8518230318602331,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "When should I raise a group project problem with the instructor to get individual grades adjusted?",
+      "in_corpus": true,
+      "best_distance": 0.39584693049960107,
+      "results": [
+        {
+          "text": "THREAD: How do you handle a group project where someone disappears?\n\n--- reply 1 (29 votes) ---\nDocument early. Not to be difficult \u2014 because if you go to the instructor in week 10 with nothing written down, there's nothing they can do.\n\n--- reply 2 (22 votes) ---\nMost instructors here will adjust individual grades if you raise it before the deadline rather than after. After is too late, consistently.\n\n--- reply 3 (16 votes) ---\nSplit work into pieces that can be handed off. If one person's part is load-bearing for everyone else, one disappearance sinks it.",
+          "source": "thread_group_project.txt",
+          "label": "thread_group_project.txt#0",
+          "distance": 0.39584693049960107,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: What actually happens if you hand something in late?\n\n--- reply 1 (20 votes) ---\nEntirely instructor-dependent and the syllabus is accurate. If it says 10% a day, it's 10% a day.\n\n--- reply 2 (47 votes) ---\nThe universal rule: ask before the deadline, not after. Almost everyone will give you two days if you ask on Wednesday for a Friday deadline. Almost nobody will on the following Monday.\n\n--- reply 3 (15 votes) ---\nDocumented illness goes through the dean of students rather than the instructor, and that route works.",
+          "source": "thread_late_work.txt",
+          "label": "thread_late_work.txt#0",
+          "distance": 0.6314481049129017,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Does the edition of the textbook matter?\n\n--- reply 1 (23 votes) ---\nFor maths and physics, almost never \u2014 problem numbering shifts and that's it. For anything where the field moves, it can matter a lot.\n\n--- reply 2 (34 votes) ---\nAsk the instructor directly. Most will tell you the previous edition is fine, and they can't put that in the syllabus for procurement reasons.\n\n--- reply 3 (12 votes) ---\nThe library reserve copy is always the current edition, so you can check the numbering against yours for free.",
+          "source": "thread_textbook_editions.txt",
+          "label": "thread_textbook_editions.txt#0",
+          "distance": 0.7038332079134617,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Is it weird to go to office hours with no specific question?\n\n--- reply 1 (44 votes) ---\nNo, and this is the single most common thing first years get wrong. 'I'm following the lectures but I don't feel like I understand the shape of it' is a completely normal thing to say.\n\n--- reply 2 (29 votes) ---\nThey're usually empty. You are doing the instructor a favour by turning up.\n\n--- reply 3 (18 votes) ---\nIf it helps, treat it as a standing appointment. Go every week for a month and it stops feeling like a thing.",
+          "source": "thread_office_hours_etiquette.txt",
+          "label": "thread_office_hours_etiquette.txt#0",
+          "distance": 0.7197765231079505,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: What do you wish you'd known in first year?\n\n--- reply 1 (41 votes) ---\nThat the add/drop deadline and the withdrawal deadline are different dates and only one of them is on the calendar everyone reads.\n\n--- reply 2 (28 votes) ---\nThat you can take a course pass/fail and declare it late \u2014 up to week eight. I carried a grade I didn't need to.\n\n--- reply 3 (35 votes) ---\nThat the writing centre will read a draft for any course, not just writing courses. Free, and the appointments go unbooked.\n\n--- reply 4 (52 votes) ---\nHonestly: that nobody is watching as closely as you think. I spent a year worried about looking like I knew what I was doing.\n\n--- reply 5 (17 votes) ---\nThat your adviser's job is partly to know the exceptions to rules. Ask before assuming a deadline is fixed.",
+          "source": "thread_first_year_regret.txt",
+          "label": "thread_first_year_regret.txt#0",
+          "distance": 0.736449912674328,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "What is the capital of Mongolia?",
+      "in_corpus": false,
+      "best_distance": 0.9479168083013841,
+      "results": [
+        {
+          "text": "THREAD: How much laptop do I actually need for CS courses?\n\n--- reply 1 (31 votes) ---\nLess than the recommended spec page says. 16GB of RAM is the one number worth paying for; everything else you'll never notice.\n\n--- reply 2 (18 votes) ---\nAdding: the lab machines exist and are better than anything you'll buy. For the heavy assignments people just use those.\n\n--- reply 3 (12 votes) ---\nI did two years on an 8GB machine and it was fine until the last project, at which point it very much wasn't. 16 is the answer.",
+          "source": "thread_laptop_specs.txt",
+          "label": "thread_laptop_specs.txt#0",
+          "distance": 0.9479168083013841,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: First winter here \u2014 what do I need?\n\n--- reply 1 (26 votes) ---\nLayers, not a big coat. The buildings are overheated and you'll carry a parka around all day.\n\n--- reply 2 (31 votes) ---\nBoots with actual tread. The path past the pond ices over and people go down on it every year.\n\n--- reply 3 (18 votes) ---\nGet a light that clips to your bag. It's dark by 4:30 in December and parts of the walk from Fenwick aren't lit well.",
+          "source": "thread_winter_advice.txt",
+          "label": "thread_winter_advice.txt#0",
+          "distance": 0.9644811987266814,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: When is laundry actually free in the dorms?\n\n--- reply 1 (27 votes) ---\nTuesday and Wednesday mornings, every building. Sunday evening is the worst and it isn't close.\n\n--- reply 2 (8 votes) ---\nDepends heavily on your building. Morrow has more machines per person than Fenwick so it's less of a problem there.\n\n--- reply 3 (16 votes) ---\nThe app that shows machine availability is wrong about half the time. It reports a machine as free for a few minutes after it finishes but before someone unloads it.",
+          "source": "thread_laundry_timing.txt",
+          "label": "thread_laundry_timing.txt#0",
+          "distance": 0.9679563995698923,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Is a bike worth it for a 20 minute walk commute?\n\n--- reply 1 (14 votes) ---\nYeah. Cuts an 18 minute walk to about 6. The thing nobody mentions is storage \u2014 covered bike parking exists at three buildings and is full by 9am at all three.\n\n--- reply 2 (9 votes) ---\nCounterpoint, I sold mine. Between November and March the paths are either icy or salted and salt destroys a drivetrain in one season.\n\n--- reply 3 (22 votes) ---\nBoth true. I keep a cheap bike for September to November and walk the rest of the year. Total cost was about $120 for the bike and I don't care what happens to it.\n\n--- reply 4 (5 votes) ---\nIf you do get one, the campus does free registration and it's the only reason I got mine back after it was taken.",
+          "source": "thread_bike_commute.txt",
+          "label": "thread_bike_commute.txt#0",
+          "distance": 0.9810849983186536,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: How hard is it to change major in second year?\n\n--- reply 1 (22 votes) ---\nAdministratively trivial \u2014 it's a form. The real question is whether the credits you've taken map onto the new requirements.\n\n--- reply 2 (27 votes) ---\nDepends enormously on the direction. Moving within the sciences is usually fine. Moving into a science from outside in your third year means an extra semester more often than not.\n\n--- reply 3 (19 votes) ---\nTalk to the department adviser for the major you want, not your current one. They know the exceptions.",
+          "source": "thread_changing_major.txt",
+          "label": "thread_changing_major.txt#0",
+          "distance": 0.9875434678910876,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "How do I change the oil in a diesel engine?",
+      "in_corpus": false,
+      "best_distance": 0.9298545800484672,
+      "results": [
+        {
+          "text": "THREAD: How hard is it to change major in second year?\n\n--- reply 1 (22 votes) ---\nAdministratively trivial \u2014 it's a form. The real question is whether the credits you've taken map onto the new requirements.\n\n--- reply 2 (27 votes) ---\nDepends enormously on the direction. Moving within the sciences is usually fine. Moving into a science from outside in your third year means an extra semester more often than not.\n\n--- reply 3 (19 votes) ---\nTalk to the department adviser for the major you want, not your current one. They know the exceptions.",
+          "source": "thread_changing_major.txt",
+          "label": "thread_changing_major.txt#0",
+          "distance": 0.9298545800484672,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: First winter here \u2014 what do I need?\n\n--- reply 1 (26 votes) ---\nLayers, not a big coat. The buildings are overheated and you'll carry a parka around all day.\n\n--- reply 2 (31 votes) ---\nBoots with actual tread. The path past the pond ices over and people go down on it every year.\n\n--- reply 3 (18 votes) ---\nGet a light that clips to your bag. It's dark by 4:30 in December and parts of the walk from Fenwick aren't lit well.",
+          "source": "thread_winter_advice.txt",
+          "label": "thread_winter_advice.txt#0",
+          "distance": 0.9395946100451379,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Does the edition of the textbook matter?\n\n--- reply 1 (23 votes) ---\nFor maths and physics, almost never \u2014 problem numbering shifts and that's it. For anything where the field moves, it can matter a lot.\n\n--- reply 2 (34 votes) ---\nAsk the instructor directly. Most will tell you the previous edition is fine, and they can't put that in the syllabus for procurement reasons.\n\n--- reply 3 (12 votes) ---\nThe library reserve copy is always the current edition, so you can check the numbering against yours for free.",
+          "source": "thread_textbook_editions.txt",
+          "label": "thread_textbook_editions.txt#0",
+          "distance": 0.9917494148821792,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Everyone says fix your sleep. Does it actually matter?\n\n--- reply 1 (29 votes) ---\nYes, and the specific thing that helped me was scheduling no classes before 10am rather than trying to become a morning person.\n\n--- reply 2 (37 votes) ---\nThe library being open until 2am is a trap. It's a resource, not a schedule.\n\n--- reply 3 (16 votes) ---\nCounselling runs a short workshop on this that is more practical than it sounds. Four sessions, and it's free.",
+          "source": "thread_sleep_schedule.txt",
+          "label": "thread_sleep_schedule.txt#0",
+          "distance": 0.9996836207438555,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Which meal plan tier is right?\n\n--- reply 1 (24 votes) ---\nDepends entirely on whether your building has a kitchen. Fenwick has kitchenettes, so people there go down a tier and cook two or three nights. Everywhere else, get the middle tier.\n\n--- reply 2 (19 votes) ---\nThe highest tier only makes sense if you eat three meals a day in the halls every single day, which basically nobody does past October.\n\n--- reply 3 (11 votes) ---\nRemember you can only change it once and only in the first ten days. I waited and got stuck on a plan I didn't use.\n\n--- reply 4 (7 votes) ---\nDeclining balance rolls within the semester but not between them. Spend it in December or lose it.",
+          "source": "thread_meal_plan_tier.txt",
+          "label": "thread_meal_plan_tier.txt#0",
+          "distance": 1.010235424100787,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "Who won the 1994 World Cup?",
+      "in_corpus": false,
+      "best_distance": 0.951709029552746,
+      "results": [
+        {
+          "text": "THREAD: First winter here \u2014 what do I need?\n\n--- reply 1 (26 votes) ---\nLayers, not a big coat. The buildings are overheated and you'll carry a parka around all day.\n\n--- reply 2 (31 votes) ---\nBoots with actual tread. The path past the pond ices over and people go down on it every year.\n\n--- reply 3 (18 votes) ---\nGet a light that clips to your bag. It's dark by 4:30 in December and parts of the walk from Fenwick aren't lit well.",
+          "source": "thread_winter_advice.txt",
+          "label": "thread_winter_advice.txt#0",
+          "distance": 0.951709029552746,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: How much laptop do I actually need for CS courses?\n\n--- reply 1 (31 votes) ---\nLess than the recommended spec page says. 16GB of RAM is the one number worth paying for; everything else you'll never notice.\n\n--- reply 2 (18 votes) ---\nAdding: the lab machines exist and are better than anything you'll buy. For the heavy assignments people just use those.\n\n--- reply 3 (12 votes) ---\nI did two years on an 8GB machine and it was fine until the last project, at which point it very much wasn't. 16 is the answer.",
+          "source": "thread_laptop_specs.txt",
+          "label": "thread_laptop_specs.txt#0",
+          "distance": 0.9550117192257844,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Do professors actually answer email?\n\n--- reply 1 (21 votes) ---\nVaries enormously. General rule I've found: if the syllabus states a response window, it's honoured. If it doesn't, assume 48 hours and don't panic before then.\n\n--- reply 2 (33 votes) ---\nOffice hours are dramatically more effective than email for anything that takes more than two sentences to answer. They're also usually empty.\n\n--- reply 3 (15 votes) ---\nEmpty office hours is the biggest unused resource here and I say that having wasted a year not going.",
+          "source": "thread_professor_email.txt",
+          "label": "thread_professor_email.txt#0",
+          "distance": 0.9551306756706188,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: When should you actually use the pass/fail option?\n\n--- reply 1 (24 votes) ---\nFor a course outside your major that you're taking because you're curious. That's what it's for and most people never use it.\n\n--- reply 2 (38 votes) ---\nThe part that isn't advertised: you can declare it as late as week eight. So take the midterm first, then decide.\n\n--- reply 3 (20 votes) ---\nCareful with this one if you're applying to graduate programmes. Some want a letter grade for prerequisites and a P doesn't satisfy it.\n\n--- reply 4 (12 votes) ---\nTwo per year and eight across the degree. I hit the annual limit in second year and regretted spending one on an easy course.",
+          "source": "thread_pass_fail.txt",
+          "label": "thread_pass_fail.txt#0",
+          "distance": 0.9802532000325577,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: When is laundry actually free in the dorms?\n\n--- reply 1 (27 votes) ---\nTuesday and Wednesday mornings, every building. Sunday evening is the worst and it isn't close.\n\n--- reply 2 (8 votes) ---\nDepends heavily on your building. Morrow has more machines per person than Fenwick so it's less of a problem there.\n\n--- reply 3 (16 votes) ---\nThe app that shows machine availability is wrong about half the time. It reports a machine as free for a few minutes after it finishes but before someone unloads it.",
+          "source": "thread_laundry_timing.txt",
+          "label": "thread_laundry_timing.txt#0",
+          "distance": 0.9885629957859995,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "What is the recommended dosage of ibuprofen for a headache?",
+      "in_corpus": false,
+      "best_distance": 0.828034205731447,
+      "results": [
+        {
+          "text": "THREAD: When should you actually use the pass/fail option?\n\n--- reply 1 (24 votes) ---\nFor a course outside your major that you're taking because you're curious. That's what it's for and most people never use it.\n\n--- reply 2 (38 votes) ---\nThe part that isn't advertised: you can declare it as late as week eight. So take the midterm first, then decide.\n\n--- reply 3 (20 votes) ---\nCareful with this one if you're applying to graduate programmes. Some want a letter grade for prerequisites and a P doesn't satisfy it.\n\n--- reply 4 (12 votes) ---\nTwo per year and eight across the degree. I hit the annual limit in second year and regretted spending one on an easy course.",
+          "source": "thread_pass_fail.txt",
+          "label": "thread_pass_fail.txt#0",
+          "distance": 0.828034205731447,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Is the printing quota enough?\n\n--- reply 1 (17 votes) ---\nFor most people yes. $30 is about 600 pages black and white. It's the colour printing that eats it \u2014 eight times the cost per page.\n\n--- reply 2 (11 votes) ---\nDoesn't roll over between semesters. Print your readings in December rather than losing it.",
+          "source": "thread_printing.txt",
+          "label": "thread_printing.txt#0",
+          "distance": 0.8388715640522836,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: How much laptop do I actually need for CS courses?\n\n--- reply 1 (31 votes) ---\nLess than the recommended spec page says. 16GB of RAM is the one number worth paying for; everything else you'll never notice.\n\n--- reply 2 (18 votes) ---\nAdding: the lab machines exist and are better than anything you'll buy. For the heavy assignments people just use those.\n\n--- reply 3 (12 votes) ---\nI did two years on an 8GB machine and it was fine until the last project, at which point it very much wasn't. 16 is the answer.",
+          "source": "thread_laptop_specs.txt",
+          "label": "thread_laptop_specs.txt#0",
+          "distance": 0.8800192800075868,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Which meal plan tier is right?\n\n--- reply 1 (24 votes) ---\nDepends entirely on whether your building has a kitchen. Fenwick has kitchenettes, so people there go down a tier and cook two or three nights. Everywhere else, get the middle tier.\n\n--- reply 2 (19 votes) ---\nThe highest tier only makes sense if you eat three meals a day in the halls every single day, which basically nobody does past October.\n\n--- reply 3 (11 votes) ---\nRemember you can only change it once and only in the first ten days. I waited and got stuck on a plan I didn't use.\n\n--- reply 4 (7 votes) ---\nDeclining balance rolls within the semester but not between them. Spend it in December or lose it.",
+          "source": "thread_meal_plan_tier.txt",
+          "label": "thread_meal_plan_tier.txt#0",
+          "distance": 0.9023078595183014,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: First winter here \u2014 what do I need?\n\n--- reply 1 (26 votes) ---\nLayers, not a big coat. The buildings are overheated and you'll carry a parka around all day.\n\n--- reply 2 (31 votes) ---\nBoots with actual tread. The path past the pond ices over and people go down on it every year.\n\n--- reply 3 (18 votes) ---\nGet a light that clips to your bag. It's dark by 4:30 in December and parts of the walk from Fenwick aren't lit well.",
+          "source": "thread_winter_advice.txt",
+          "label": "thread_winter_advice.txt#0",
+          "distance": 0.9047481389113441,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    },
+    {
+      "question": "How do I write a for loop in Rust?",
+      "in_corpus": false,
+      "best_distance": 0.8712310646987981,
+      "results": [
+        {
+          "text": "THREAD: First winter here \u2014 what do I need?\n\n--- reply 1 (26 votes) ---\nLayers, not a big coat. The buildings are overheated and you'll carry a parka around all day.\n\n--- reply 2 (31 votes) ---\nBoots with actual tread. The path past the pond ices over and people go down on it every year.\n\n--- reply 3 (18 votes) ---\nGet a light that clips to your bag. It's dark by 4:30 in December and parts of the walk from Fenwick aren't lit well.",
+          "source": "thread_winter_advice.txt",
+          "label": "thread_winter_advice.txt#0",
+          "distance": 0.8712310646987981,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: How many clubs is too many?\n\n--- reply 1 (31 votes) ---\nTwo you actually turn up to beats six you signed up for at the fair.\n\n--- reply 2 (24 votes) ---\nThe club fair collects about four hundred email addresses per society and maybe thirty people ever appear. Don't feel bad about the signup sheet.\n\n--- reply 3 (18 votes) ---\nIf you want a leadership position later, depth in one is worth more than breadth across five.",
+          "source": "thread_clubs.txt",
+          "label": "thread_clubs.txt#0",
+          "distance": 0.9183729464267971,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Worth getting a parking permit?\n\n--- reply 1 (15 votes) ---\nWest lots sell out in about three days in August. East lot never sells out but it's a 12 minute walk, at which point you might as well have parked on the street.\n\n--- reply 2 (21 votes) ---\nStreet parking on Verrill is legal and free and unmarked, which is why half the upper years do it.\n\n--- reply 3 (8 votes) ---\nIf you're commuting daily, the west permit is worth the August scramble. Otherwise don't bother.",
+          "source": "thread_parking.txt",
+          "label": "thread_parking.txt#0",
+          "distance": 0.934129433121665,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: Does the edition of the textbook matter?\n\n--- reply 1 (23 votes) ---\nFor maths and physics, almost never \u2014 problem numbering shifts and that's it. For anything where the field moves, it can matter a lot.\n\n--- reply 2 (34 votes) ---\nAsk the instructor directly. Most will tell you the previous edition is fine, and they can't put that in the syllabus for procurement reasons.\n\n--- reply 3 (12 votes) ---\nThe library reserve copy is always the current edition, so you can check the numbering against yours for free.",
+          "source": "thread_textbook_editions.txt",
+          "label": "thread_textbook_editions.txt#0",
+          "distance": 0.9459784407620433,
+          "produced_by": "chunker.py::split_documents"
+        },
+        {
+          "text": "THREAD: How much laptop do I actually need for CS courses?\n\n--- reply 1 (31 votes) ---\nLess than the recommended spec page says. 16GB of RAM is the one number worth paying for; everything else you'll never notice.\n\n--- reply 2 (18 votes) ---\nAdding: the lab machines exist and are better than anything you'll buy. For the heavy assignments people just use those.\n\n--- reply 3 (12 votes) ---\nI did two years on an 8GB machine and it was fine until the last project, at which point it very much wasn't. 16 is the answer.",
+          "source": "thread_laptop_specs.txt",
+          "label": "thread_laptop_specs.txt#0",
+          "distance": 0.9583686794709357,
+          "produced_by": "chunker.py::split_documents"
+        }
+      ]
+    }
+  ],
+  "chosen_threshold": 0.7,
+  "decision": "0.7 is between the largest in-corpus best distance (0.602432) and smallest out-of-corpus best distance (0.828034). Keep top-k=5; the locker answer is at rank 3."
+}

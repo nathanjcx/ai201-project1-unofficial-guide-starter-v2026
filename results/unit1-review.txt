@@ -1,0 +1,35 @@
+Unit 1 development checks — Codex source review
+
+This is one final development pass, not the three-run unit 2 evaluation.
+The initial unsupported week-10 deadline is retained in unit1-answers-initial.json.
+
+Q1: How long should I wait for a professor to reply if no given response window?
+Answer-containing source: thread_professor_email.txt; retrieval rank 1.
+Supporting excerpt: If it doesn't, assume 48 hours and don't panic before then.
+Review: final factual claims supported by the cited document.
+
+Q2: Where can I check the current textbook edition's problem numbering for free?
+Answer-containing source: thread_textbook_editions.txt; retrieval rank 1.
+Supporting excerpt: The library reserve copy is always the current edition, so you can check the numbering against yours for free.
+Review: final factual claims supported by the cited document.
+
+Q3: How much does renting a locker in the commuter lounge cost per year?
+Answer-containing source: thread_commuting.txt; retrieval rank 3.
+Supporting excerpt: The commuter lounge in the student centre has lockers you can rent for $20 a year and it changes the experience completely.
+Review: final factual claims supported by the cited document.
+
+Q4: What damages a bike's drivetrain during winter?
+Answer-containing source: thread_bike_commute.txt; retrieval rank 1.
+Supporting excerpt: Between November and March the paths are either icy or salted and salt destroys a drivetrain in one season.
+Review: final factual claims supported by the cited document.
+
+Q5: When should I raise a group project problem with the instructor to get individual grades adjusted?
+Answer-containing source: thread_group_project.txt; retrieval rank 1.
+Supporting excerpt: Most instructors here will adjust individual grades if you raise it before the deadline rather than after.
+Review: final factual claims supported by the cited document.
+
+Final observations: 5/5 retrieved an answer-containing thread; 5/5 answers cited their supporting thread;
+5/5 unrelated questions refused, with 0 model calls for those questions.
+The five displayed chunks retain their complete source threads.
+
+Generalization is unmeasured: a small tuning set and one answer per question are not a unit 2 verdict.

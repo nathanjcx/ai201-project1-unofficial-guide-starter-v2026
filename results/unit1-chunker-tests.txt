@@ -1,0 +1,11 @@
+test_all_actual_threads_keep_their_full_content (test_chunker.ThreadChunkingTests.test_all_actual_threads_keep_their_full_content) ... ok
+test_invalid_size_fails_clearly (test_chunker.ThreadChunkingTests.test_invalid_size_fails_clearly) ... ok
+test_long_thread_keeps_title_and_every_reply_once (test_chunker.ThreadChunkingTests.test_long_thread_keeps_title_and_every_reply_once) ... ok
+test_oversized_reply_is_preserved (test_chunker.ThreadChunkingTests.test_oversized_reply_is_preserved) ... ok
+test_paragraphs_and_empty_documents (test_chunker.ThreadChunkingTests.test_paragraphs_and_empty_documents) ... ok
+test_short_thread_has_no_overlapping_tail (test_chunker.ThreadChunkingTests.test_short_thread_has_no_overlapping_tail) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+OK

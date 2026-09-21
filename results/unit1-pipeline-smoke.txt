@@ -1,0 +1,74 @@
+AI201 unit 1 starter — smoke test
+------------------------------------------------------------
+
+campus_life
+[PASS]   loads documents
+       88 documents
+[PASS]   chunks them
+       88 chunks
+[PASS]   chunks carry a source and a producing function
+[PASS]   no chunk is empty
+[PASS]   indexes
+[PASS]   retrieves
+       top-5
+[PASS]   results are ordered nearest first
+[PASS]   distances are cosine-shaped (0 to 2)
+       range 0.780–0.794
+
+advice_threads
+[PASS]   loads documents
+       23 documents
+[PASS]   chunks them
+       23 chunks
+[PASS]   chunks carry a source and a producing function
+[PASS]   no chunk is empty
+[PASS]   indexes
+[PASS]   retrieves
+       top-5
+[PASS]   results are ordered nearest first
+[PASS]   distances are cosine-shaped (0 to 2)
+       range 0.800–0.939
+
+city_guides
+[PASS]   loads documents
+       14 documents
+[PASS]   chunks them
+       46 chunks
+[PASS]   chunks carry a source and a producing function
+[PASS]   no chunk is empty
+[PASS]   indexes
+[PASS]   retrieves
+       top-5
+[PASS]   results are ordered nearest first
+[PASS]   distances are cosine-shaped (0 to 2)
+       range 0.920–0.976
+
+practice
+[PASS]   loads documents
+       28 documents
+[PASS]   chunks them
+       40 chunks
+[PASS]   chunks carry a source and a producing function
+[PASS]   no chunk is empty
+[PASS]   indexes
+[PASS]   retrieves
+       top-5
+[PASS]   results are ordered nearest first
+[PASS]   distances are cosine-shaped (0 to 2)
+       range 0.836–0.906
+
+cross-cutting
+[PASS]   collection uses cosine distance
+       hnsw:space=cosine
+[PASS]   gate passes a close match
+[PASS]   gate refuses a distant one
+[PASS]   gate refuses when nothing came back
+[PASS]   two chunkings can be indexed side by side
+[PASS]   identical prompt is served from cache
+[PASS]   cache=False forces a real call
+[PASS]   usage() reports something readable
+       2 model calls this session, 1 served from cache
+[PASS]   session budget guard stops runaway loops
+
+------------------------------------------------------------
+All checks passed.

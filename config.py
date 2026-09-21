@@ -33,7 +33,7 @@ CHUNK_OVERLAP = 0       # fallback setting; custom chunker repeats titles only
 
 # ─── Retrieval (Milestone 4) ─────────────────────────────────────────────────
 
-TOP_K = 5               # how many chunks to pull back per question
+TOP_K = 5               # locker answer ranked third; retain nearby candidates
 
 # The relevance gate. If the best chunk is further away than this, the system
 # refuses to answer instead of handing the model thin material.
@@ -43,7 +43,9 @@ TOP_K = 5               # how many chunks to pull back per question
 # 0.6 is a reasonable starting point, not a right answer. Milestone 4 has you
 # measure your own two groups of distances and put the cutoff in the gap.
 # Most corpora land somewhere between 0.45 and 0.75.
-THRESHOLD = 0.6
+# Measured best distances: in corpus 0.350329–0.602432;
+# out of corpus 0.828034–0.951709. See the ten rows in README.md.
+THRESHOLD = 0.7
 
 
 # ─── Models ──────────────────────────────────────────────────────────────────
