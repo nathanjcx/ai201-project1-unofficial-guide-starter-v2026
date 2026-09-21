@@ -1,6 +1,6 @@
 # The Unofficial Guide
 
-<!-- Replace this line with your name and which corpus you picked. -->
+Nathan Cheng — `advice_threads`
 
 > **This file is your submission.** Fill it in as you go — most sections get
 > written during the milestone that produces them, not at the end.
@@ -29,54 +29,124 @@
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** 800 characters as a soft limit, keeping whole threads together
+when they fit.
+**Overlap:** 0 characters of reply text. For a longer thread, repeat its title
+in each chunk and split only between complete replies.
 
-<!-- What about YOUR documents made you pick these numbers? Short posts and
-     long sectioned guides don't want the same chunking, and "800 seemed
-     reasonable" earns nothing. Point at something you noticed when you read
-     the documents in Milestone 1.
+Plan recorded before implementing the new chunker: the 23 cleaned advice
+threads are 317–793 characters long, so each complete discussion fits within
+800 characters. Keeping the replies together matters because some begin with
+"Both true" or "Varies enormously" and need their question or earlier replies.
+If a future thread is longer, group complete replies up to the target; allow a
+single long reply to exceed it rather than cutting a sentence. Other document
+formats will use complete paragraphs as their boundaries.
 
-     If you changed your mind partway through, say so and say why. That's worth
-     more than pretending you got it right first time.
+The starter used 800-character windows with 120-character overlap and made
+26 chunks, averaging 487 characters. The shortest was 2 characters (`t.` from
+`thread_meal_plan_tier.txt#1`); the longest was 793. It generated an unnecessary
+overlap tail even when a thread already fit in one chunk. The class activity
+number, recorded before changing the chunker, was **26**.
 
-     Milestone 3. -->
+The implemented `chunker.py::split_documents` produces **23 chunks**, averaging
+**543 characters**, with a **317-character minimum** and **793-character maximum**.
+Every thread in this corpus stays in one chunk. This removes the redundant
+tails while retaining disagreements between replies. The tradeoff is that
+a whole thread can include several pieces of advice, so retrieval may still
+bring back material that is only partly relevant. For future longer threads,
+a reply may refer to a previous chunk; repeating the title does not solve
+every dependency between replies.
+
+`ingest.py::clean_text` already normalizes line endings, repeated whitespace,
+and extra blank lines. The supplied threads have no website navigation or
+ads to remove; thread titles, reply labels, and votes are retained.
+
 
 ## Sample Chunks
 
-<!-- Five chunks, pasted as text. Label each one and name the file it came from
-     AND the function that produced it — the grader checks your code against
-     what you claim here.
+Printed with `python app.py --corpus advice_threads chunks -n 5`.
 
-     `python app.py chunks -n 5` prints all three for you. Copy them straight
-     across.
+**Chunk 1** — source: `thread_bike_commute.txt#0` — produced by: `chunker.py::split_documents`
 
-     Milestone 3. -->
+```text
+THREAD: Is a bike worth it for a 20 minute walk commute?
 
-**Chunk 1** — source: `` — produced by: ``
+--- reply 1 (14 votes) ---
+Yeah. Cuts an 18 minute walk to about 6. The thing nobody mentions is storage — covered bike parking exists at three buildings and is full by 9am at all three.
 
-```
-```
+--- reply 2 (9 votes) ---
+Counterpoint, I sold mine. Between November and March the paths are either icy or salted and salt destroys a drivetrain in one season.
 
-**Chunk 2** — source: `` — produced by: ``
+--- reply 3 (22 votes) ---
+Both true. I keep a cheap bike for September to November and walk the rest of the year. Total cost was about $120 for the bike and I don't care what happens to it.
 
-```
-```
-
-**Chunk 3** — source: `` — produced by: ``
-
-```
+--- reply 4 (5 votes) ---
+If you do get one, the campus does free registration and it's the only reason I got mine back after it was taken.
 ```
 
-**Chunk 4** — source: `` — produced by: ``
+**Chunk 2** — source: `thread_first_gen.txt#0` — produced by: `chunker.py::split_documents`
 
-```
+```text
+THREAD: Anything specific for first-generation students?
+
+--- reply 1 (33 votes) ---
+The advising office has a specific programme and it is genuinely good, but it is opt-in and badly publicised. Ask for it by name.
+
+--- reply 2 (41 votes) ---
+The thing I'd say: the unwritten rules are the hard part, not the coursework. Ask about the unwritten rules explicitly. People are happy to explain them and nobody volunteers them.
+
+--- reply 3 (16 votes) ---
+Emergency fund for textbooks and travel exists and is not means-tested beyond a short form.
 ```
 
-**Chunk 5** — source: `` — produced by: ``
+**Chunk 3** — source: `thread_laptop_specs.txt#0` — produced by: `chunker.py::split_documents`
 
+```text
+THREAD: How much laptop do I actually need for CS courses?
+
+--- reply 1 (31 votes) ---
+Less than the recommended spec page says. 16GB of RAM is the one number worth paying for; everything else you'll never notice.
+
+--- reply 2 (18 votes) ---
+Adding: the lab machines exist and are better than anything you'll buy. For the heavy assignments people just use those.
+
+--- reply 3 (12 votes) ---
+I did two years on an 8GB machine and it was fine until the last project, at which point it very much wasn't. 16 is the answer.
 ```
+
+**Chunk 4** — source: `thread_office_hours_etiquette.txt#0` — produced by: `chunker.py::split_documents`
+
+```text
+THREAD: Is it weird to go to office hours with no specific question?
+
+--- reply 1 (44 votes) ---
+No, and this is the single most common thing first years get wrong. 'I'm following the lectures but I don't feel like I understand the shape of it' is a completely normal thing to say.
+
+--- reply 2 (29 votes) ---
+They're usually empty. You are doing the instructor a favour by turning up.
+
+--- reply 3 (18 votes) ---
+If it helps, treat it as a standing appointment. Go every week for a month and it stops feeling like a thing.
 ```
+
+**Chunk 5** — source: `thread_professor_email.txt#0` — produced by: `chunker.py::split_documents`
+
+```text
+THREAD: Do professors actually answer email?
+
+--- reply 1 (21 votes) ---
+Varies enormously. General rule I've found: if the syllabus states a response window, it's honoured. If it doesn't, assume 48 hours and don't panic before then.
+
+--- reply 2 (33 votes) ---
+Office hours are dramatically more effective than email for anything that takes more than two sentences to answer. They're also usually empty.
+
+--- reply 3 (15 votes) ---
+Empty office hours is the biggest unused resource here and I say that having wasted a year not going.
+```
+
+All five include their thread title and complete replies. On their own,
+they can answer questions about biking in winter, first-generation support,
+laptop RAM, visiting office hours, and professor email response times.
 
 ## Sample Answer
 

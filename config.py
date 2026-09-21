@@ -24,11 +24,11 @@ CORPUS = os.getenv("AI201_CORPUS", "advice_threads")
 
 
 # ─── Chunking (Milestone 3) ──────────────────────────────────────────────────
-# These are deliberately plain, generic numbers. Milestone 3 is where you
-# replace them with numbers that fit the documents you actually read.
+# Advice threads are 317–793 characters long after cleaning. Keep each short
+# discussion whole and split longer ones only between complete replies.
 
-CHUNK_SIZE = 800        # characters per chunk
-CHUNK_OVERLAP = 120     # characters shared between neighbouring chunks
+CHUNK_SIZE = 800        # soft target, including the title
+CHUNK_OVERLAP = 0       # fallback setting; custom chunker repeats titles only
 
 
 # ─── Retrieval (Milestone 4) ─────────────────────────────────────────────────

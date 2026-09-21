@@ -1,0 +1,3 @@
+23 chunks, 543 characters on average (shortest 317, longest 793), produced by chunker.py::split_documents
+All 23 cleaned threads preserved exactly.
+Six chunker regression checks passed.

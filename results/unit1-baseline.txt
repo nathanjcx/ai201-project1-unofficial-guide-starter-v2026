@@ -1,0 +1,8 @@
+Starter baseline, before the custom chunker
+23 documents, 12,490 characters, ~543 characters per document
+26 chunks, 487 characters on average (shortest 2, longest 793), produced by chunker.py::fallback_split
+
+Small overlapping tails:
+thread_bike_commute.txt#1: 59 characters; "nd it's the only reason I got mine back after it was taken."
+thread_first_year_regret.txt#1: 113 characters; ") ---\nThat your adviser's job is partly to know the exceptions to rules. Ask before assuming a deadline is fixed."
+thread_meal_plan_tier.txt#1: 2 characters; 't.'
