@@ -2,30 +2,39 @@
 
 Nathan Cheng — `advice_threads`
 
-> **This file is your submission.** Fill it in as you go — most sections get
-> written during the milestone that produces them, not at the end.
->
-> How the starter works, and every command you'll need, is in `RUNNING.md`.
-> Leave that file alone.
->
-> **Paste everything as text.** No screenshots, no video. A typed table gets
-> full credit; a picture of the same table gets none.
->
-> Delete these instruction blocks as you replace them. The `<!-- -->` comments
-> are notes to you and don't show up when the page renders — you can leave them
-> or remove them.
-
----
-
 # Unit 1
 
 ## What This Does
 
-<!-- Three or four sentences. Which corpus you picked, and the kinds of
-     questions your system answers. Write it for someone who has never seen
-     this repo.
+This is a command-line question-answering tool for the 23 student discussions
+in `advice_threads`. It answers questions about things like professor emails,
+textbooks, commuting, bikes, and group projects. It searches the documents and
+uses a model to write a short answer with the source filename. When the search
+results are too far from the question, it returns "I don't have enough
+information about that" before calling the model.
 
-     Milestone 5. -->
+For a fresh clone, use Python 3.11–3.13 and install the starter dependencies:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+cp .env.example .env
+```
+
+Set `GEMINI_API_KEY` in `.env`, following `.env.example`, then run:
+
+```bash
+python test.py
+python app.py index
+python app.py ask "How much does renting a locker in the commuter lounge cost per year?"
+```
+
+`advice_threads` is the default in `config.py`. An `AI201_CORPUS` value in
+`.env` overrides it; use `--corpus advice_threads` to choose it explicitly.
+The key, downloaded packages, model-response cache, and vector store stay out
+of Git. A fresh clone needs its own key and a new `index` run. More commands
+are in [RUNNING.md](RUNNING.md).
 
 ## Chunking Strategy
 
@@ -150,50 +159,116 @@ laptop RAM, visiting office hours, and professor email response times.
 
 ## Sample Answer
 
-<!-- One complete question and answer, pasted as text, with the source line
-     visible. Milestone 4. -->
-
-**Question:**
+**Question:** How much does renting a locker in the commuter lounge cost per year?
 
 **Answer:**
 
+```text
+According to a reply in the commuting thread, renting a locker in the commuter lounge costs $20 a year.
+
+Source: thread_commuting.txt
 ```
-```
 
-**My relevance cutoff:**
+This is the complete answer returned by `app.py::ask_pipeline` during the
+final development check. Its best retrieval distance was
+**0.602432**. The source containing the $20 price ranked
+third; the top result was about bikes and did not answer the locker question.
 
-<!-- The number you set in config.py, and how you got there.
+**Top-k:** 5. The locker result shows why using only the first result would
+miss useful information. Keeping five leaves room for another relevant result,
+but also gives the model loosely related text, so the grounding instruction
+must tell it to use only sources that actually support the answer.
 
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
-
-     Milestone 4. -->
+**My relevance cutoff:** 0.7, using cosine distance. Smaller means closer,
+and the gate passes only when the best distance is strictly below the cutoff.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| How long should I wait for a professor to reply if no given response window? | Yes | 0.410175 |
+| Where can I check the current textbook edition's problem numbering for free? | Yes | 0.350329 |
+| How much does renting a locker in the commuter lounge cost per year? | Yes | 0.602432 |
+| What damages a bike's drivetrain during winter? | Yes | 0.520547 |
+| When should I raise a group project problem with the instructor to get individual grades adjusted? | Yes | 0.395847 |
+| What is the capital of Mongolia? | No | 0.947917 |
+| How do I change the oil in a diesel engine? | No | 0.929855 |
+| Who won the 1994 World Cup? | No | 0.951709 |
+| What is the recommended dosage of ibuprofen for a headache? | No | 0.828034 |
+| How do I write a for loop in Rust? | No | 0.871231 |
+
+The in-corpus best distances ranged from **0.350329 to 0.602432**. The
+out-of-corpus best distances ranged from **0.828034 to 0.951709**. The 0.7
+cutoff sits in that gap and leaves some room on both sides. The original 0.6
+cutoff would have refused the locker question at 0.602432 even though its
+answer was in the top five. A cutoff above 0.828034 would start admitting an
+unrelated question from this set.
+
+For example, asking "What is the capital of Mongolia?" produced:
+
+```text
+I don't have enough information about that.
+```
+
+Its best distance was 0.947917. All five out-of-corpus questions were refused,
+with **zero model calls** for those questions. This is checked before
+`generate.py::answer_from_chunks` runs.
+
+The grounding prompt tells the model to use only the supplied text, preserve
+qualifications and disagreements, and finish with an exact source filename.
+An initial check still produced an unsupported "by week 10 at the latest"
+deadline for group projects. The thread only used week 10 as an example of
+arriving without documentation. Codex added instructions against turning
+examples into deadlines and reran all five questions with caching disabled;
+the revised answer kept the before-deadline advice and the documentation
+example separate. The original output remains in the evidence folder.
+
+**Development checks:**
+
+- `python test.py`: 10 passed, 0 failed.
+- `python -m unittest discover -s tests -v`: 6 chunker tests passed, including
+  content preservation, long threads, oversized replies, and empty input.
+- The bundled pipeline smoke test passed using stand-in models and a separate
+  temporary vector store. It checks the pipeline, not retrieval quality.
+- One final pass using real embeddings and real model calls retrieved an
+  answer-containing thread for all five questions. All five generated answers
+  cited their supporting document; Codex checked the factual claims against
+  the source text. All five unrelated questions stopped at the gate.
+
+These are unit 1 development observations. The three-run unit 2 evaluation
+has not been performed, and its template is left below for that work. Five
+covered and five clearly unrelated questions are a small tuning set; new
+questions, especially unsupported questions about student life, may behave
+differently. A close retrieval score does not prove an answer is in the text,
+and a citation does not by itself prove the model used that text correctly.
+
+The measurements, full retrieved text for the first three questions, prompts,
+original and final answers, and test logs are in [results/](results/).
+`results/unit1-answers.json` contains the final model outputs;
+`results/unit1-answers-initial.json` preserves the earlier grounding mistake.
 
 ## How I Used AI
 
-<!-- Two specific moments. For each: what you asked for, what came back, and
-     what you changed about it.
+**1. Setup and test questions.** I asked Codex to guide me step by step and
+then asked for five simple questions. It explained why a reply needs its thread
+title and suggested questions with expected answer phrases. I ran the setup
+check, chose `advice_threads`, indexed it, asked the first email question,
+edited `questions.py`, and made the first commit. Before testing the five
+questions, Codex made the textbook question more specific and changed
+`before deadline` to `before the deadline` to match the source wording.
 
-     "I asked Claude to write the chunking function from my notes. It ignored
-     the overlap, so I added that myself" is the level of detail we're after.
-     "I used AI to help me code" is not.
+**2. Completing the implementation and checking answers.** I later asked
+Codex to finish the remaining project. It drafted the criteria explanations
+and criteria 4–5, wrote the custom chunker, measured retrieval distances,
+selected the cutoff, and completed this README using real outputs. During
+its checks, the model added an unsupported week-10 deadline; Codex tightened
+the grounding prompt and verified the revised outputs. The code and prompt
+changes in this stage were made by Codex, and the initial failed answer is
+saved alongside the final answers.
 
-     Milestone 5. -->
-
-**1.**
-
-**2.**
-
-<!-- ── Stretch features ─────────────────────────────────────────────────────
-     Doing one? Say so here BEFORE you start. A feature this README never
-     claims earns nothing.
-     ───────────────────────────────────────────────────────────────────────── -->
+This project includes substantial AI assistance. Criteria 1–3 are supplied by
+the assignment; the other two and their explanations are AI-assisted drafts,
+not independently student-authored criteria. The commit history records the
+actual order of work, including the criteria commit before retrieval tuning.
+No stretch features are claimed.
 
 ---
 
